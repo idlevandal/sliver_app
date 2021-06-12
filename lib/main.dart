@@ -39,7 +39,8 @@ class HomePage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            pinned: true,
+            pinned: true, // pint to the top, if false it disappears
+            floating: true, // comes back into view as soon a user scrolls up
             expandedHeight: 160.0,
               backgroundColor: Color(0xFF3a4d65),
             flexibleSpace: FlexibleSpaceBar(

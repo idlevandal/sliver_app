@@ -66,9 +66,10 @@ class PostList extends ConsumerWidget {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight)),
               child: ListTile(
-                leading: Icon(Icons.today_outlined, color: Colors.white70,),
+                leading: Icon(Icons.account_circle_outlined, color: Colors.white70,),
                 title: Text('User Id: ${data[index].userId} ___ Post Id: ${data[index].id!}', style: TextStyle(color: Colors.white),),
                 subtitle: Text(data[index].title!, style: TextStyle(color: Colors.white70),),
+                trailing: Icon(Icons.today_outlined, color: Color(0xFF536379),),
               ),
             ),
           );

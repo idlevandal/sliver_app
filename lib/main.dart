@@ -30,14 +30,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: TodoList(),
+      backgroundColor: Color(0xFFb5bcc5),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF3a4d65),
+        title: Text('Posts', style: TextStyle(color: Colors.white),)
+      ),
+      body: PostList(),
     );
   }
 }
 
-class TodoList extends ConsumerWidget {
-  const TodoList({Key? key}) : super(key: key);
+class PostList extends ConsumerWidget {
+  const PostList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
@@ -63,7 +67,7 @@ class TodoList extends ConsumerWidget {
                       end: Alignment.bottomRight)),
               child: ListTile(
                 leading: Icon(Icons.today_outlined, color: Colors.white70,),
-                title: Text('User Id: ${data[index].userId} ___ Todo Id: ${data[index].id!}', style: TextStyle(color: Colors.white),),
+                title: Text('User Id: ${data[index].userId} ___ Post Id: ${data[index].id!}', style: TextStyle(color: Colors.white),),
                 subtitle: Text(data[index].title!, style: TextStyle(color: Colors.white70),),
               ),
             ),
